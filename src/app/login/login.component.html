@@ -1,0 +1,26 @@
+<div class="card container" style="width:18rem">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email"
+                [class.is-invalid]="loginForm.get('email').invalid && loginForm.get('email').touched" >
+                <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+                    <small class="text-danger" *ngIf="loginForm.get('email')?.errors?.required">Email is a required field</small>
+                    <small class="text-danger" *ngIf="loginForm.get('email')?.errors?.pattern">Please write correct email</small>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password"
+                formControlName="password" [class.is-invalid]="loginForm.get('password').invalid && loginForm.get('password').touched" >
+                <small class="text-danger"  *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">Password is a required field </small>
+            
+            </div>
+        
+        <button  [disabled]="loginForm.invalid" (click)="loginClick()" class="btn btn-primary">Login</button>
+        or
+        <button (click)="goToRegister()" class="btn btn-primary">Register</button>
+    
+    </form>
+</div>
