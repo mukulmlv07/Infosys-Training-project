@@ -1,0 +1,33 @@
+div{
+    text-align: center;
+    margin-top:10px;
+}
+
+.container{
+    padding: 8px;
+}
+
+input{
+    margin: 5px;
+    padding: 5px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+button{
+    color: white;
+    background-color: #3d85c6;
+    width: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+p.success{color: green;}
+
+h3{color: red;}

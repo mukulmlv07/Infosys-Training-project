@@ -1,0 +1,26 @@
+<div class="pricecomp-ctnr" *ngIf="productComparisonData.length>0">
+    <h4 class="pricecomp-txt">Price Comparison</h4>
+    <hr/>
+    <table >
+        <thead>
+            <tr>
+            <th>Seller's Name</th>
+            <th>Discount</th>
+            <th>Delivery-Charge</th>
+            <th>Product-Price</th>
+            <th>Offer-Price</th>
+            <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let productComp of productComparisonData">
+                <td>{{productComp.sellerName}}</td>
+                <td>{{productComp.discount}}</td>
+                <td>{{productComp.deliveryCharge}}</td>
+                <td>{{productComp.price}}</td>
+                <td>{{productComp.offerPrice}}</td>
+                <td>{{productComp.rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

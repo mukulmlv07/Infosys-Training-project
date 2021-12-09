@@ -1,0 +1,18 @@
+
+.pricecomp-ctnr{
+   margin-left: 80px;
+}
+table{
+    border:1px solid #B45309;
+    border-radius: 15px;
+}
+th,td{
+    padding: 35px;
+}
+.pricecomp-txt{
+    font-size: 18px;
+    color: #B45309;
+}
+hr{
+    margin-right: 120px;
+}

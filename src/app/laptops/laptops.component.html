@@ -1,0 +1,16 @@
+<h5 class="search-results-heading">Laptop's</h5>
+<div  *ngIf="allLaptops.length>0" class="cards-ctnr">
+    <div class="card-item"  *ngFor="let product of allLaptops">
+      <a [routerLink] = '["/productDetails"]' (click)="setCartItem(product)">
+        <div>
+            <img class="product-img" [src]=[product.imageUrl]>
+            <hr/>
+            <p class="product-name">{{product.displayName}}</p>
+            <div class="product-price-ctnr">
+                <span> Rs.{{product.price}}</span>
+                <span >{{product.discount}}% off</span>
+            </div>
+        </div>
+      </a>
+    </div>
+</div>

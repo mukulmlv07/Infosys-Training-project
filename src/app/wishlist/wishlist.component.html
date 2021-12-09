@@ -1,0 +1,23 @@
+<div class="wishlist-class">
+    <h4>Your Favourites</h4>
+    <hr/>
+    <div  *ngIf="demoData.length>0" class="cards-ctnr">
+        <div class="card-item"  *ngFor="let product of demoData">
+            <a [routerLink]='["/productDetails"]'>
+            <div>
+                <img class="product-img" src="../assets/laptop-1.jpeg">
+                <hr/>
+                <p class="product-name">{{product.displayName}}</p>
+                <!-- <div class="product-desc">
+                    <p>{{product.shortDesc}}</p>
+                </div> -->
+            </div>
+            </a>
+            <div class="buttons">
+            <button type="button" class="btn btn-info btn-sm" (click)="addtocart(product.displayName)">Move To Cart</button>
+            <button type="button" class="btn btn-info btn-sm" (click)="removeitem(product.displayName)">Remove</button>
+            </div>
+        </div>
+    </div>
+    <div  *ngIf="demoData.length<=0" class="cards-ctnr" >no products found</div>
+</div>

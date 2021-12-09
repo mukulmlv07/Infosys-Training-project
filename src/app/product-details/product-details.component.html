@@ -1,0 +1,65 @@
+<div class="container" *ngIf="productThere===true">
+    <div class="image-container">
+        <img [src]=[val.imageUrl]>
+    </div>  
+    <div class="product-desc">
+        <h4>{{val.displayName}}</h4>
+        <div class="rating-ctnr">
+            <p class="rating-box"><small>rating: {{product.avgRating}} </small></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<small><em>{{product.reviews.length}} customers reviewed</em></small></p>
+        </div>
+        <hr/>
+        <p>M.R.P: <del>{{product.price}}</del></p>
+        <p>Price: {{product.offerPrice}}</p>
+        <p><small><strong>You Save: {{product.discount}}%</strong></small></p>
+        <p><small>Delivery Charge: {{product.deliveryCharge}}</small></p>
+        <div class="quantity-ctnr">
+            <p>Quantity: </p>&nbsp;&nbsp;
+            <select (change)="changeQuantity(quant.value)" #quant>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+            </select>
+        </div>
+        <p>  <small><strong>Product Info: </strong>
+      {{product.desc}} </small>
+        </p>
+        <button class="add-cart-btn" *ngIf="!isItemsThereInCart" (click)="addToCart()"> 
+            Add to cart
+        </button>
+        <button class="add-cart-btn" *ngIf="isItemsThereInCart" (click)="goToCart()"> 
+           Go To Cart
+        </button>
+        <button class="add-cart-btn" (click)="addToWishList()" *ngIf="!isItemsThereInWishList"> 
+            Add to Wishlist
+        </button>
+        <button class="add-cart-btn" (click)="goToWishList()" *ngIf="isItemsThereInWishList"> 
+            Go to Wishlist
+        </button>
+    </div>
+</div>
+<app-pricecomparison></app-pricecomparison>
+<div class="review-container">
+    <h4 class="cust-review-heading">customer reviews</h4>
+    <div *ngFor="let review of product.reviews">
+        <p class="rating-box"><small>rating: {{review.rating}} </small></p>
+        <p><em>By {{review.userid}}</em></p>
+        <p>{{review.reviewComments}}</p>
+        <hr/>
+    </div>
+ <textarea  class="review-box" cols="150" rows="3" [(ngModel)]="reviewEntered"></textarea>
+ rating the product:
+ <select (change)="changeRating(rateitem.value)" #rateitem>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select>
+ <button class="submit-btn" (click)="submitReview()">submit</button>
+</div>

@@ -1,0 +1,96 @@
+<div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav-item" >
+            <p class="nav-link active" (click)="msg.onClick(0)">OpenOrders</p>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link " (click)="msg.onClick(1)">Closed Orders</p>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link " (click)="msg.onClick(2)">Cancelled Orders</p>
+        </li>
+        <li class="nav-item">
+            <p class="nav-link" (click)="msg.onClick(3)">Returned Orders</p>
+        </li>
+    </ul>
+    <div appRepeat #msg="changeMessage">
+    <div class="openorderid" style="display:block">
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+                <th>card Type</th>
+                <th>Products</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let data of openOrders; let i = index">
+                <td>{{data.orderID}}</td>
+                <td>{{data.orderDate}}</td>
+                <td>{{data.orderStatus}}</td>
+                <td>{{data.cardType}}</td>
+                <td>{{data.displayName}}</td>
+                <td><Button class="button">Cancel</Button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="closedorderid" style="display:none">
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+                <th>card Type</th>
+                <th>Products</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let data of closedOrders; let i = index">
+                <td>{{data.orderID}}</td>
+                <td>{{data.orderDate}}</td>
+                <td>{{data.orderStatus}}</td>
+                <td>{{data.cardType}}</td>
+                <td>{{data.displayName}}</td>
+                <td><Button class="button">Return</Button></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cancelorderid" style="display:none">
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+                <th>card Type</th>
+                <th>Products</th>
+            </tr>
+            <tr *ngFor="let data of cancelledOrders; let i = index">
+                <td>{{data.orderID}}</td>
+                <td>{{data.orderDate}}</td>
+                <td>{{data.orderStatus}}</td>
+                <td>{{data.cardType}}</td>
+                <td>{{data.displayName}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="returnorderid" style="display:none">
+        <table>
+            <tr>
+                <th>Order ID</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+                <th>card Type</th>
+                <th>Products</th>
+            </tr>
+            <tr *ngFor="let data of returnOrders; let i = index">
+                <td>{{data.orderID}}</td>
+                <td>{{data.orderDate}}</td>
+                <td>{{data.orderStatus}}</td>
+                <td>{{data.cardType}}</td>
+                <td>{{data.displayName}}</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</div>

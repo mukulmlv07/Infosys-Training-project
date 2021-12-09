@@ -1,0 +1,40 @@
+.container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 40px auto;
+}
+.image-container{
+  display: flex;
+  align-items: center;
+}
+.rating-ctnr{
+    display: flex;
+}
+.quantity-ctnr{
+display: flex;
+}
+.add-cart-btn,.submit-btn{
+    display: block;
+    margin-top: 10px;
+    background-color: #F59E0B;
+    border: none;
+    border-color: 2px solid #F59E0B;
+    color: #000;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+}
+.rating-box{
+    width: 70px;
+    text-align: center;
+    background-color: #000;
+    border-radius: 5px;
+    color: #fff;
+}
+.review-container{
+    margin: 100px;
+}
+.cust-review-heading{
+    color: #B45309;
+
+}

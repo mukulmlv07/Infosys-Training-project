@@ -1,0 +1,58 @@
+<div class="product-cart-container">
+    <div [hidden] = "!isProductCartVisible">
+        <div class="product-cart-title"><p>Shopping Cart</p></div>
+        <div class="product-cart-header">
+            <p></p>
+            <p></p>
+            <p>Category</p>
+            <p>Quantity</p>
+            <p>Total price</p>
+        </div>
+        <div class="product-row-container">
+            <div *ngFor="let item of cart_items; let i=index" class="product-cart-row">
+                <div class="product-cart-row-items">
+                    <img class="product-img" src="../assets/laptop-1.jpeg">
+                    <div class="product-display-name"><p>{{item.displayName}}</p></div>
+                    <div class="product-category"><p>{{item.category}}</p></div>
+                    <div class="product-quantity">
+                        <button (click) = "decreaseQuantity(i)">-</button>
+                        <p>{{item.quantity}}</p>
+                        <button (click) = "increaseQuantity(i)">+</button>
+                    </div>
+                        
+                    <div class="product-price"><p>{{getItemPrice(i)}}</p></div>        
+                    <div class="product-remove-button"><button (click) = "removeItem(i)">Remove Item</button></div>                        
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>            
+        </div>        
+
+        <div class="product-checkout-container"> 
+            <div class="product-total-delivery-charges-container">
+                Total delivery charge : {{getTotalDeliveryCharges()}}
+            </div>
+            <div class="product-total-amount-container">
+                Total Amount : {{getTotalAmount()}}
+            </div>
+            <div class="product-checkout-button-container">
+                <button>Checkout</button>
+            </div>
+        </div>
+    </div>    
+
+    <div [hidden] = "isProductCartVisible" class="product-cart-empty">
+        <h1>Oops!</h1>
+        <h1>There are no items available in your cart..</h1>
+    </div>
+</div>
+
+
+<div class="product-toast-container" [hidden] = "!isToastVisible">
+    <div class="product-toast">
+        <div class="product-toast-note"><p>Note!</p></div>
+        <div class="product-toast-note"><p>Cannot add more than {{maxOrderLimit}} items.</p></div>
+        <div><button (click) = "isToastVisible = false">Ok</button></div>
+    </div>
+</div>

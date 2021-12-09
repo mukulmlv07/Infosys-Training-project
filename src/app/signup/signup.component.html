@@ -1,0 +1,53 @@
+<div>
+    <h4 class="register">Register</h4>
+        <table class="container" >
+            <tr>
+                <td class="label">
+                    <label>Name:</label>
+                </td>
+                <td>
+                    <input type="text" placeholder="Name" [(ngModel)]="name">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <label>Email:</label>
+                </td>
+                <td>
+                    <input type="email" placeholder="Email" [(ngModel)]="email">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <label>Password:</label>
+                </td>
+                <td>
+                    <input type="password" placeholder="Re-enter Password" [(ngModel)]="password">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <label>Confirm Password:</label>
+                </td>
+                <td>
+                    <input type="password" placeholder="Re-enter Password" [(ngModel)]="confirmPassword">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">
+                    <label>Account Type:</label>                
+                </td>
+                <td>
+                    <select class="input" [(ngModel)]="accountType">
+                        <option value="Buyer" selected>Buyer</option>
+                        <option value="Seller">Seller</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" (click)="register()">Register</button><br>
+        <a routerLink="/login">login</a>
+        <br>
+        <p class="error">{{errorMsg}}</p>
+        <h4 *ngIf="success">Registration Successfull!</h4>
+</div>
