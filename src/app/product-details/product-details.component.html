@@ -29,7 +29,7 @@
         <p>  <small><strong>Product Info: </strong>
       {{product.desc}} </small>
         </p>
-        <button class="add-cart-btn" *ngIf="!isItemsThereInCart" (click)="addToCart()"> 
+        <button class="add-cart-btn" *ngIf="!isItemsThereInCart" (click)="addToCart($event)"> 
             Add to cart
         </button>
         <button class="add-cart-btn" *ngIf="isItemsThereInCart" (click)="goToCart()"> 

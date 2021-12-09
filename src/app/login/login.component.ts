@@ -21,16 +21,16 @@ export class LoginComponent implements OnInit {
 
   validatePassword():void{
     //TODO: authenticate email and password from backend
-    const uname = this.email;
-    const pwd = this.password;
+    const userId = this.email;
+    const password = this.password;
     this.loginService
-      .isUserAuthenticated(uname, pwd)
-      .subscribe((authenticated) => {
-        if (authenticated) {
+      .isUserAuthenticated({userId, password})
+      .subscribe(success=>{console.log(success)
+        if(success.message=='successfully logged in'){
           this.router.navigate(['']);
-        } else {
+        }else{
           this.errorMsg = 'Invalid Credentials. Try again.';
         }
-      });
+      })
   }
 }

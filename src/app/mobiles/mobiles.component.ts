@@ -22,7 +22,7 @@ export class MobilesComponent implements OnInit {
   }
   currentProduct!:any;
   setCartItem(value:any){
-    console.log(value)
+    // console.log("Hello",value)
     localStorage.setItem("currentProduct",JSON.stringify(value));
 }
 }

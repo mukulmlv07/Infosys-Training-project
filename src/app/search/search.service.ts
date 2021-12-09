@@ -30,10 +30,11 @@ export class SearchService {
   get recommendations for a user
   */
   getRecommendtions():Observable<any[]>{
-    return this.http.get<any[]>('./assets/searchdata.json').pipe(
-      tap((data:any)=>console.log("recommended products",data)),
-      catchError(this.handleError)
-    )
+    return this.http.get("http://localhost:3000/").pipe(tap((_:any)=>console.log(_)))
+    // return this.http.get<any[]>('./assets/searchdata.json').pipe(
+    //   tap((data:any)=>console.log("recommended products",data)),
+    //   catchError(this.handleError)
+    // )
     }
     /*
     getProduct Details of a selected product

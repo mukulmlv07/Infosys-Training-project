@@ -20,6 +20,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { RepeatDirective } from './orders/repeat.directive';
 import { LaptopsComponent } from './laptops/laptops.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 
 
@@ -42,6 +43,7 @@ import { MobilesComponent } from './mobiles/mobiles.component';
     RepeatDirective,
     LaptopsComponent,
     MobilesComponent,
+    ProductListComponent,
   ],
   imports: [
     BrowserModule,

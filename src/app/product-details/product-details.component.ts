@@ -40,9 +40,10 @@ export class ProductDetailsComponent implements OnInit {
     this.giveRating=parseInt(value);
     console.log(this.giveRating);
   }
-  addToCart(){
+  addToCart(x){
     this.isItemsThereInCart=true;
     let data={};
+      console.log(x)
     // this.searchService.addItemIntoCart(data).subscribe(
     //   (result)=>{
     //     console.log("items added to cart");
