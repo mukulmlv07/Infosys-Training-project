@@ -14,7 +14,8 @@ import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {
-    path:'',component:HomeComponent
+    path:'',component:HomeComponent,
+    canActivate:[AuthGuardService] 
   },
   {
     path:'search/:productname',component:SearchComponent
@@ -30,10 +31,12 @@ const routes: Routes = [
   {
     path: "wishlist",
     component: WishlistComponent,
+    canActivate:[AuthGuardService]
   },
   {
     path:"cart",
     component:ProductCartComponent,
+    canActivate:[AuthGuardService]
   },
   {
     path: "productDetails",
@@ -42,6 +45,7 @@ const routes: Routes = [
   {
     path:"orders",
     component: OrdersComponent,
+    canActivate:[AuthGuardService]
   },
 ];
 

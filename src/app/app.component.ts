@@ -37,7 +37,7 @@ export class AppComponent implements DoCheck {
   removeuserId():void{
     this.loginService.removeId();
     this.userId='';
-    this.router.navigate(['']);
+    this.router.navigate(['/login']);
   }
 
 

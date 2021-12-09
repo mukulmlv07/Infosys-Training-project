@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MainServicesService } from '../main-services.service';
+import { user } from '../user';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +15,7 @@ export class SignupComponent implements OnInit {
   accountType:string = "Buyer";
   errorMsg!:string;
   success:boolean=false;
-  constructor() { }
+  constructor(private signupService: MainServicesService) { }
   ngOnInit():void {
   }
 
@@ -27,7 +29,7 @@ export class SignupComponent implements OnInit {
       this.errorMsg="Name contains invalid character";
        return;
      }
-     if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/.test(this.password)==false){
+     if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/.test(this.password)==false){
       this.errorMsg="Password should contain atleast one uppercase and a lowercase character, a number and a special character";
       return;
      }
@@ -35,7 +37,21 @@ export class SignupComponent implements OnInit {
        this.errorMsg="Password and Confirm Password are not matching";
        return;
      }
-     this.success=true;
-     this.errorMsg="";
+     console.log("somthing",this.email)
+    //  this.signupService.register()
+    const userModal=new user(this.name,this.email,this.password,this.accountType)
+    // console.log(userModal)
+    this.signupService.register(userModal).subscribe(success=>{
+      if(success.status=='error'){
+        this.success=false;
+        this.errorMsg=success.message
+      }
+      else{
+        this.errorMsg=''
+        this.success=true
+      }
+    },error=>{
+      
+    })
   }
 }
