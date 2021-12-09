@@ -29,6 +29,10 @@ export class SignupComponent implements OnInit {
       this.errorMsg="Name contains invalid character";
        return;
      }
+     if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)==false){
+      this.errorMsg="Email should be in proper formate";
+       return;
+     }
      if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/.test(this.password)==false){
       this.errorMsg="Password should contain atleast one uppercase and a lowercase character, a number and a special character";
       return;
