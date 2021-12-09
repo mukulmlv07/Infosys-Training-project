@@ -1,0 +1,56 @@
+[
+    {
+      "displayName":"mobile-1",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/phone1.jpeg"
+    },
+    {
+      "displayName":"mobile-2",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/phone2.jpeg"
+
+    },
+    {
+      "displayName":"mobile-3",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/phone3.jpeg"
+
+    },
+    {
+      "displayName":"mobile-4",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/phone4.jpeg"
+
+    },
+    {
+      "displayName":"mobile-5",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/phone5.jpeg"
+
+    }
+]

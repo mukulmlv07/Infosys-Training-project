@@ -1,0 +1,15 @@
+<div>
+    <p>Sign In to continue Shopping</p>
+    <div class="container">
+        <img src="../../assets/profile-picture-avatar-icon-vector-260nw-1760295569.jpg">
+        <br>
+        <input type="email" placeholder="Email" [(ngModel)]="email">
+        <br>
+        <input type="password" placeholder="Password" [(ngModel)]="password">
+        <br>
+        <button type="button" (click)="validatePassword()">Sign In</button>
+    </div>
+    <h3>{{errorMsg}}</h3>
+    <p class="success" *ngIf="success">Login Success!</p>
+    <a routerLink="/signup">Register</a>
+</div>

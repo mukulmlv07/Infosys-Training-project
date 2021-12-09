@@ -1,0 +1,33 @@
+nav{
+    background-color: #374151;
+    padding: 10px;
+}
+.title{
+    color:rgb(88, 88, 245)
+}
+.search-ctnr{
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    float: right;
+}
+.search-box{
+    width: 300px;
+    font-size: 15px;
+}
+.search-btn{
+    background-color: #3B82F6;
+    color:white;
+    border: 1px solid #3B82F6;
+    font-size: 12px;
+
+}
+li.nav-item{
+    margin-left: 60px;
+}
+.nav-link{
+    color:white;
+}
+#logout{
+    cursor: pointer;
+}

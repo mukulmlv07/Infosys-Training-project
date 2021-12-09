@@ -1,0 +1,56 @@
+[
+    {
+      "displayName":"laptop-1",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/laptop-1.jpeg"
+    },
+    {
+      "displayName":"laptop-2",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/laptop-2.jpeg"
+
+    },
+    {
+      "displayName":"laptop-3",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/laptop-3.jpeg"
+
+    },
+    {
+      "displayName":"laptop-4",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/laptop-4.jpeg"
+
+    },
+    {
+      "displayName":"laptop-5",
+      "shortDesc":"a gamping laptop",
+      "desription":"snkjds jdknfd kmlkdfd kffklf kklfmglkfg; kmfklfmg",
+      "category":"laptop",
+      "price":52020,
+      "discount":10,
+      "deliveryCharge":20,
+      "imageUrl":"../assets/laptop-5.png"
+
+    }
+]

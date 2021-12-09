@@ -1,0 +1,27 @@
+[
+    {
+    "price":50000,
+    "discount":10,
+    "deliveryCharge":25,
+    "offerPrice":40000,
+    "sellerName":"bbk electronics",
+    "rating":4.3
+    },
+    {
+        "price":50000,
+        "discount":10,
+        "deliveryCharge":25,
+        "offerPrice":40000,
+        "sellerName":"k&k electronics",
+        "rating":4.0
+        },
+        {
+            "price":50000,
+            "discount":10,
+            "deliveryCharge":25,
+            "offerPrice":40000,
+            "sellerName":"SME electronics",
+            "rating":4.0
+            }
+
+]

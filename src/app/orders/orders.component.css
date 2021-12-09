@@ -1,0 +1,18 @@
+.container{
+    padding:50px;
+    position: relative;
+}
+table{
+    width: 70%;
+    position: absolute;
+    margin-top: 60px;
+}
+.button{
+    color:white;
+    background-color: rgb(219, 48, 48);
+    border-radius: 5px;
+}
+.nav-link:hover{
+    cursor: pointer;
+    background-color:rgb(167, 158, 158);
+}
